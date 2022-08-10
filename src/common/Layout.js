@@ -1,6 +1,5 @@
 import React from 'react';
 import HeaderOne from './header/HeaderOne';
-import Copyright from './footer/Copyright';
 
 const Layout = ({ children }) => {
   return (
