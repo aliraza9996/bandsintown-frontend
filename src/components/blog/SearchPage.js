@@ -45,7 +45,7 @@ const SearchPage = (props) => {
       await axios
         .get(
           process.env.REACT_APP_BRANDSINTOWN_DEFAULT_URL +
-            `/artists/id_${query.get('s')}?app_id` +
+            `/artists/id_${query.get('s')}?app_id=` +
             process.env.REACT_APP_BRANDSINTOWN_APP_ID
         )
         .then((response) => {
