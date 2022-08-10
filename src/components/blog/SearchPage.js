@@ -6,18 +6,18 @@ import axios from 'axios';
 import { useHistory, useLocation } from 'react-router-dom';
 import Layout from '../../common/Layout';
 const SearchPage = (props) => {
-  const [text, setText] = useState(props.search || '');
-  const [loader, setLoader] = useState(false);
-  const [data, setData] = useState({});
-  const [refetch,setRefetch]=useState(0)
-  const history = useHistory();
-
   function useQuery() {
     //this function returns url parameters
     const { search } = useLocation();
     return React.useMemo(() => new URLSearchParams(search), [search]);
   }
   let query = useQuery(); //to get the query from url
+  const [text, setText] = useState(query.get('s') || '');
+  const [loader, setLoader] = useState(false);
+  const [data, setData] = useState({});
+  const [refetch,setRefetch]=useState(0)
+  const history = useHistory();
+
 
   const onChangeHandler = (text) => {
     //On change function to save text
