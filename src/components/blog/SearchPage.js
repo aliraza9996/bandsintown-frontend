@@ -116,14 +116,14 @@ const SearchPage = (props) => {
                         Back
                       </a>
                     </div>
-                    {data && Object.keys(data).length !== 0 ? (
+                    {data && Object.keys(data).length !== 0 && !data.error ? (
                       <>
                         {/*If data is fetched then render this*/}
                         <DisplayProducts data={data} setSearch={props.setSearch} col=" col-lg-4" />
                       </>
                     ) : (
                       //If no data is available render this
-                      <div className="mb-5">No Artist Available</div>
+                      <div className="mb-5 text-center">No Artist Available</div>
                     )}
                   </>
                 )}
