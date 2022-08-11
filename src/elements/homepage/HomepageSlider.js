@@ -44,16 +44,16 @@ const HomepageSlider = () => {
   // Imports all images for the slider
   const BannerData = [
     {
-      image: '/images/Slider/1.png',
+      image: '/images/Slider/1.jpg',
     },
     {
-      image: '/images/Slider/2.png',
+      image: '/images/Slider/2.jpg',
     },
     {
-      image: '/images/Slider/3.png',
+      image: '/images/Slider/3.jpg',
     },
     {
-      image: '/images/Slider/4.png',
+      image: '/images/Slider/4.jpg',
     },
   ];
   const [suggestions, setSuggestions] = useState([]);
